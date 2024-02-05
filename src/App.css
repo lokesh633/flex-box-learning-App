@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.title{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #F6FDC3;
+}
+.App-main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+.App{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #CDFADB;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Flex{
+    height: 400px;
+    width: 50%;
+    background-color: #FFF7F1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Button{
+    height: 400px;
+    width: 40%;
+    background-color: #FFF3CF;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+@media (max-width:850px) {
+    .App{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 3%;
+    }
+    
+.Flex{
+    height: 400px;
+    width: 80%;
+    background-color: #FFF7F1;
+}
+.Button{
+    height: 400px;
+    width: 80%;
+    background-color: #FFF3CF;
+}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media (max-width:450px) {
+    .Flex{
+        height: 280px;
+        width: 280px;
+        background-color: #FFF7F1;
+    }
+    .Button{
+        height: 300px;
+        width: 93%;
+        background-color: #FFF3CF;
+    }
+    h1{
+        font-size: 20px;
+    }
 
-.App-link {
-  color: #61dafb;
 }
+@media (max-width:300px) {
+    .Flex{
+        height: 280px;
+        width: 280px;
+        background-color: #FFF7F1;
+    }
+    .Button{
+        height: 300px;
+        width: 100%;
+        background-color: #FFF3CF;
+    }
+    h1{
+        font-size: 15px;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

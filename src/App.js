@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from "react";
+import "./App.css";
+import Flex from "./flex";
+import Button from "./button";
+import { AppContext } from "./context";
 
 function App() {
+  
+  const [flexDirection,setFlexDirection] = useState("")
+
+  const [justifyContent,setJustifyContent] = useState("")
+
+  const [alignItems,setAlignItems] = useState("");
+
+  console.log(flexDirection ,justifyContent,alignItems);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={{flexDirection ,justifyContent,alignItems,setFlexDirection,setJustifyContent,setAlignItems}} >
+      <div className="App-main">
+      <h1 className="title">
+        Flex Box
+      </h1>
+      <div className="App">
+        <div className="Flex">
+          <Flex />
+        </div>
+        <div className="Button">
+          <Button />
+        </div>
+      </div>
+      </div>
+    </AppContext.Provider>
   );
 }
 

@@ -1,0 +1,26 @@
+.inside-box{
+    height: 100px;
+    width: 100px;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+
+}
+
+@media(max-width:425px){
+   .inside-box{
+    height: 70px;
+    width: 70px;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+
+}
+
+}
